@@ -1,14 +1,14 @@
-# 🧪 Prompt Engineering for GitHub Copilot — Node.js Edition
+#  Prompt Engineering for GitHub Copilot — Node.js Edition
 
-## 🎯 Objective
+##  Objective
 
 Learn to craft high-quality prompts using the **4S Method (Single, Specific, Short, Surround)** while building a Node.js application using **GitHub Copilot Ask, Edit & Chat**.
 
 ---
 
-## 📦 SECTION 1 — Setup
+##  SECTION 1 — Setup
 
-### ✅ Prerequisites
+###  Prerequisites
 
 * Visual Studio Code
 * GitHub Copilot Chat or Copilot Enterprise
@@ -16,7 +16,7 @@ Learn to craft high-quality prompts using the **4S Method (Single, Specific, Sho
 * Sample folder on desktop
 * GitHub Copilot extension enabled
 
-### ▶️ Initialize Node.js Project
+###  Initialize Node.js Project
 
 Open VS Code terminal and run:
 
@@ -38,7 +38,7 @@ app.listen(3000);
 
 ---
 
-## 📚 SECTION 2 — Understanding the 4 Principles (4S)
+##  SECTION 2 — Understanding the 4 Principles (4S)
 
 ### **1. Single** – Ask Copilot to perform *one* task.
 
@@ -58,7 +58,7 @@ Each exercise focuses on one principle.
 
 **Goal:** Ask Copilot to perform *only one* task.
 
-❌ **Bad Prompt:**
+ **Bad Prompt:**
 
 ```
 Create a /health endpoint, add logging, and convert the project to ES modules. Also write tests.
@@ -66,13 +66,13 @@ Create a /health endpoint, add logging, and convert the project to ES modules. A
 
 Now run:
 
-✅ **Good Prompt:**
+**Good Prompt:**
 
 ```
 Add a new endpoint `/health` that returns { status: "ok" } as JSON.
 ```
 
-✔️ *Expected:* Copilot updates only the route—no extra changes.
+ *Expected:* Copilot updates only the route—no extra changes.
 
 ---
 
@@ -80,7 +80,7 @@ Add a new endpoint `/health` that returns { status: "ok" } as JSON.
 
 **Goal:** Provide explicit, detailed instructions.
 
-❌ **Bad Prompt:**
+ **Bad Prompt:**
 
 ```
 Improve the API.
@@ -88,7 +88,7 @@ Improve the API.
 
 Now run:
 
-✅ **Good Prompt:**
+ **Good Prompt:**
 
 ```
 Add request-logging middleware that logs: "[METHOD] /path".
@@ -110,7 +110,7 @@ app.use((req, res, next) => {
 
 **Goal:** Make prompts concise but clear.
 
-❌ **Bad Prompt:** Too wordy.
+ **Bad Prompt:** Too wordy.
 
 ```
 I want you to create a Node.js controller function... (long description)
@@ -118,7 +118,7 @@ I want you to create a Node.js controller function... (long description)
 
 Now send:
 
-✅ **Good Prompt:**
+ **Good Prompt:**
 
 ```
 Create a GET `/users/:id` route.
@@ -152,7 +152,7 @@ Now prompt:
 Based on `users.service.js`, generate a controller function `getAllUsers` in `users.controller.js` that returns the users array as JSON.
 ```
 
-✔️ Copilot uses the surrounding context to generate correct code.
+ Copilot uses the surrounding context to generate correct code.
 
 ---
 
